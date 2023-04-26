@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <title>Energy Analytics</title>
+    <style>
+      body {
+        background-image: url('/static/images/natural-gas.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 align="center">Energy Resources</h1>
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="navbar">
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Prices <i class="fa fa-caret-down"></i></button>  
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations" style="color:whitesmoke;"> Univariate Visualizations</a>
+          <a href="/Dashboard/Resources/Forecasting" style="color:whitesmoke;"> ARIMA MODEL</a>
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Imports and Exports<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations1" style="color:whitesmoke;"> Multivariate Visualizations</a>
+          <a href="/Dashboard/Resources/Forecasting1" style="color:whitesmoke;"> VAR MODEL</a>
+        </div>
+      </div> 
+
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Production<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations_Production" style="color:whitesmoke;">Univariate Visualizations</a>
+          <a href="/Dashboard/Resources/Forecasting_Production" style="color:whitesmoke;"> ARIMA MODEL</a>
+        </div>
+      </div> 
+
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas Consumption<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Dashboard/Resources/Visualizations_Consumption" style="color:whitesmoke;">Multivariate Visualizations</a>
+          <a href="/Dashboard/Resources/Forecasting_Consumption" style="color:whitesmoke;"> VAR MODEL</a>
+        </div>
+      </div> 
+      
+    <ol>
+      <li><a  href="natural_gas.html" style="color:orange;">Natural Gas</a></li>
+      <div class="table-data">
+        {{returnList | safe}};
+      <li><a href="pet.html " style="color:orange;">Petroleum and Other Liquids</a></li>
+      <div class="table-data">
+        {{returnList2 | safe}};
+    </div>
+    </ol>
+  </body>
+</html>
+
+
+<!--<head>
+    <h3 class="table-heading">Energy Resources</h3>
+    <title>Energy</title>
+    <style>
+  
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head> -->
+
+<!--<h3 class="table-heading">Energy Analytics of USA</h3>
+<div class="page">
+<div class="table-data">
+    {{returnList | safe}};
+</div>
+</div> -->
